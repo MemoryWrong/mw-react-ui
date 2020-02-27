@@ -30,7 +30,6 @@
     "start": "react-scripts start && scss",
     "clean":"rm -rf esm && rm -rf lib",
     "build:cra": "react-scripts build",
-    "build2": "npm run build:js && npm run build:css && npm run build:scss",
     "build": "npm run build:js && npm run build:scss",
     "scss": "node-sass --watch src -o css",
     "test": "react-scripts test",
