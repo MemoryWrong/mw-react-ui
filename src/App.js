@@ -9,6 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>
+          mw-react-ui
+        </h1>
         <Button text={'button'}></Button>
         <Demo text={'demo'}></Demo>
       </div>
