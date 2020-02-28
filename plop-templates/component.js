@@ -12,7 +12,6 @@ const {{pascalCase name}} = () => {
 }
 
 {{pascalCase name}}.propTypes = {
-  text: PropTypes.any
 };
 
 export default {{pascalCase name}};
