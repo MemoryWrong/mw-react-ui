@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import { Button } from './components';
-import { Demo } from './components';
 
 // this is an container to show the example of the components
 class App extends Component {
@@ -13,7 +12,6 @@ class App extends Component {
           mw-react-ui
         </h1>
         <Button text={'button'}></Button>
-        <Demo text={'demo'}></Demo>
       </div>
     );
   }

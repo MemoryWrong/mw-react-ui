@@ -1,2 +1,2 @@
 export { default as Button } from './button/Button';
-export { default as Demo } from './demo/Demo';
+// IMPORT NEW REACT COMPONENT HERE

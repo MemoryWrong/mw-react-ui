@@ -1,0 +1,38 @@
+module.exports = function (plop) {
+	// controller generator
+	plop.setGenerator('component', {
+		description: 'UI component template',
+		prompts: [
+			{
+				type: 'input',
+				name: 'name',
+				message: 'component name please(example component)?'
+			}
+		],
+		actions: [
+            {
+                type: 'add',
+                path: './src/components/{{camelCase name}}/{{pascalCase name}}.js',
+                templateFile: 'plop-templates/component.js'
+            },
+            {
+                type: 'add',
+                path: './src/components/{{camelCase name}}/{{camelCase name}}.scss',
+                templateFile: 'plop-templates/component.scss'
+            },
+            {
+				type: 'modify',
+				path: './src/components/index.scss',
+				pattern: /(\/\/ IMPORT NEW REACT COMPONENT HERE)/g,
+				template: 'export { default as {{camelCase name}} } from \'./{{camelCase name}}/{{camelCase name}}\';\n// IMPORT NEW REACT COMPONENT HERE',
+            
+            },
+            {
+				type: 'modify',
+				path: './src/components/styles/styles.scss',
+				pattern: /(\/\/ IMPORT NEW COMPONENT STYLE HERE)/g,
+				template: '@import \'../{{camelCase name}}/{{camelCase name}}.scss\';\n// IMPORT NEW PAGE STYLES HERE',
+			},
+        ]
+	});
+};
